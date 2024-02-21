@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Product Management System</title>
+
+  <!--font-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display&display=swap" rel="stylesheet">
+
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+  <!--import CSS-->
+  <link rel="stylesheet" href="Project_main.css" />
+  <link rel="stylesheet" href="Project_productmanagement.css" />
+
+
+</head>
+
+<body>
+    <header>
+      <h2><a href="Project_home.html">PleaseBe</a></h2>
+    </header>
+  
+    <!--NAVIGATER BAR-->
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <!--a class="navbar-brand" href="#">Menu</a-->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent" style="justify-content: center; margin: auto;">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="justify-content: center; margin: auto;">
+          <!--for Home button-->
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="Project_home.html">Home</a>
+          </li>
+
+          <!--for dropdown button-->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">Products</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="Project_men.html">MEN</a></li>
+              <li><a class="dropdown-item" href="Project_women.html">WOMEN</a></li>
+              <li><a class="dropdown-item" href="Project_kids.html">KIDS</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="Project_accessories.html">ACCESORIES</a></li>
+            </ul>
+          </li>
+
+          <!--for search button-->
+          <li class="nav-item" role="search">
+            <a class="nav-link" href="p1_search.html">Search</a>
+          </li>
+
+          <!--for user account management button-->
+          <li class="nav-item">
+            <a class="nav-link" href="p1_userAccoutManagement.html">User Account Management</a>
+          </li>
+
+          <!--for product management button-->
+          <li class="nav-item">
+            <a class="nav-link" href="Project_productmanagement.html">Product Management</a>
+          </li>
+          <!--for login button-->
+          <li class="nav-item">
+            <a class="nav-link" href="Project_login_cusotmer.html">Log In</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!--END NAV-->
+
+  <nav class="navbar navbar-expand-lg bg-body-tertiary"></nav>
+
+    <!--create section for admin-->
+    <section>
+        <h1>Product Management</h1>
+        <ul class="addndel">
+            
+
+            <div class=addpro>
+                <!--for add product part-->
+                <fieldset>
+                    <h3>Add Product</h3><br>
+
+                    <!--Product ID-->
+                    <h5 id="user_id">Product ID:</h5>
+                    <input id="id_am" name="id_am" type="int" required="required"><br>
+
+                    <!--Product name-->
+                    <h5 id="name">Product Name:</h5>
+                    <input id="name_am" name="name_am" type="text" required="required"><br>
+
+                    <!--Product type-->
+                    <h5 id="type">Category:</h5>
+                    <select id="types" name="types" required="required">
+                        <option value="Male">---</option>
+                        <option value="Male">MEN</option>
+                        <option value="Female">Women</option>
+                        <option value="Kids">KIDS</option>
+                        <option value="acc">ACCESORIES</option>
+                    </select>
+                    <br>
+
+                    <!--Product description-->
+                    <h5 id="description">Product description:</h5>
+                    <input type="text" name="des" id="des" required="required"><br>
+
+                    <!--Product information-->
+                    <h5 id="infor">Product information:</h5>
+                    <input type="text" name="inform" id="inform" required="required"><br>
+
+                    <!--quantity-->
+                    <h5 id="bdate">Quantity:</h5>
+                    <input type="int" name="quan" id="quan" required="required">
+
+                    <!--Product Image-->
+                    <h5 id="bdate">Product photo:</h5>
+                    <input type="file" name="pho" id="pho" required="required" accept="image">
+
+                    <!--create button for Add Product-->
+                    <h5>&nbsp;</h5>
+                    <br><button type="submit" name="button" id="button" onclick="insertProduct()">Add Product</button>
+                </fieldset>
+                </br>
+            </div>
+
+            <div class=delpro>
+                <!--for delete product part-->
+                <fieldset>
+                    <h3>Delete Product</h3><br>
+
+                    <!--Product ID-->
+                    <h5 id="user_id">Product ID:</h5>
+                    <input id="id_am" name="id_am" type="int" required="required"><br>
+
+                    
+                    <!--create button for Add Product-->
+                    <h5>&nbsp;</h5>
+                    <br><button type="submit" name="button" id="button" onclick="deleteProduct()">Delete Product</button>
+                </fieldset>
+                </br>
+            </div>
+        </ul>
+
+        <!--table for manage product-->
+        <h2>Product Management System</h2>
+        <table class="table1">
+            <tbody>
+                <tr>
+                    <th>ID</th>
+                    <th>Photo</th>
+                    <th>Name</th>
+                    <th>Category</th>
+                    <th>Quantity</th>
+                    <th>ADD OR DELETE Product</th>
+                </tr>
+                
+                <!--for 1th product-->
+                <tr>
+                    <td>00010001</td>
+                    <td><img src="women1.jpg" alt="detail" style="width: 20%;"></td>
+                    <td>La maille Pralù</td>
+                    <td>Women</td>
+                    <td>7</td>
+                    <td><button type="button" id="editdata">Edit</button></td>
+                </tr>
+                <!--for 2th product-->
+                <tr>
+                    <td>00010002</td>
+                    <td><img src="women2.jpg" alt="detail" style="width: 20%;"></td>
+                    <td>Le jogging Jacquemus</td>
+                    <td>Women</td>
+                    <td>4</td>
+                    <td><button type="button" id="editdata">Edit</button></td>
+                </tr>
+                <!--for 3th product-->
+                <tr>
+                    <td>00010003</td>
+                    <td><img src="women3.jpg" alt="detail" style="width: 20%;"></td>
+                    <td>Le pantalon Espelho</td>
+                    <td>Women</td>
+                    <td>12</td>
+                    <td><button type="button" id="editdata">Edit</button></td>
+                </tr>
+                <!--for 4th product-->
+                <tr>
+                    <td>00010004</td>
+                    <td><img src="women4.jpg" alt="detail" style="width: 20%;"></td>
+                    <td>La robe maille Alca</td>
+                    <td>Women</td>
+                    <td>9</td>
+                    <td><button type="button" id="editdata">Edit</button></td>
+                </tr>
+                <!--for 5th product-->
+                <tr>
+                  <td>00020001</td>
+                  <td><img src="men1.jpg" alt="detail" style="width: 20%;"></td>
+                  <td>La chemise Boulanger</td>
+                  <td>Men</td>
+                  <td>20</td>
+                  <td><button type="button" id="editdata">Edit</button></td>
+              </tr>
+              <!--for 6th product-->
+              <tr>
+                  <td>00020002</td>
+                  <td><img src="men2.jpg" alt="detail" style="width: 20%;"></td>
+                  <td>La chemise Cabri</td>
+                  <td>Men</td>
+                  <td>18</td>
+                  <td><button type="button" id="editdata">Edit</button></td>
+              </tr>
+              <!--for 7th product-->
+              <tr>
+                  <td>00030003</td>
+                  <td><img src="men3.jpg" alt="detail" style="width: 20%;"></td>
+                  <td>Le de Nîmes Suno</td>
+                  <td>Men</td>
+                  <td>15</td>
+                  <td><button type="button" id="editdata">Edit</button></td>
+              </tr>
+              <!--for 8th product-->
+              <tr>
+                  <td>00040004</td>
+                  <td><img src="men4.jpg" alt="detail" style="width: 20%;"></td>
+                  <td>Le short Pingo</td>
+                  <td>Men</td>
+                  <td>3</td>
+                  <td><button type="button" id="editdata">Edit</button></td>
+              </tr>
+                <!--for 9th product-->
+                <tr>
+                    <td>00030001</td>
+                    <td><img src="kids1.webp" alt="detail" style="width: 20%;"></td>
+                    <td>Terry Shirt</td>
+                    <td>Kids</td>
+                    <td>10</td>
+                    <td><button type="button" id="editdata">Edit</button></td>
+                </tr>
+                <!--for 10th product-->
+                <tr>
+                    <td>00030002</td>
+                    <td><img src="kids2.webp" alt="detail" style="width: 20%;"></td>
+                    <td>Terry Short</td>
+                    <td>Kids</td>
+                    <td>2</td>
+                    <td><button type="button" id="editdata">Edit</button></td>
+                </tr>
+                <!--for 11th product-->
+                <tr>
+                    <td>00030003</td>
+                    <td><img src="kids3.webp" alt="detail" style="width: 20%;"></td>
+                    <td>Halterneck Dress</td>
+                    <td>Kids</td>
+                    <td>11</td>
+                    <td><button type="button" id="editdata">Edit</button></td>
+                </tr>
+                <!--for 12th product-->
+                <tr>
+                    <td>00030004</td>
+                    <td><img src="kids4.jpg" alt="detail" style="width: 20%;"></td>
+                    <td>Junior Trousers</td>
+                    <td>Kids</td>
+                    <td>12</td>
+                    <td><button type="button" id="editdata">Edit</button></td>
+                </tr>
+                <!--for 13th product-->
+                <tr>
+                    <td>00040001</td>
+                    <td><img src="acc1.jpg" alt="detail" style="width: 20%;"></td>
+                    <td>Link necklace with pearls and DG logo</td>
+                    <td>Acc</td>
+                    <td>4</td>
+                    <td><button type="button" id="editdata">Edit</button></td>
+                </tr>
+                <!--for 14th product-->
+                <tr>
+                    <td>00040002</td>
+                    <td><img src="acc2.jpg" alt="detail" style="width: 20%;"></td>
+                    <td>Earrings with DG logo and pearls</td>
+                    <td>Acc</td>
+                    <td>7</td>
+                    <td><button type="button" id="editdata">Edit</button></td>
+                </tr>
+                <!--for 15th product-->
+                <tr>
+                    <td>00040003</td>
+                    <td><img src="acc3.jpg" alt="detail" style="width: 20%;"></td>
+                    <td>Tape belt with branded tag</td>
+                    <td>Acc</td>
+                    <td>0</td>
+                    <td><button type="button" id="editdata">Edit</button></td>
+                </tr>
+                <!--for 16th product-->
+                <tr>
+                    <td>00040004</td>
+                    <td><img src="acc4.jpg" alt="detail" style="width: 20%;"></td>
+                    <td>Black Sicily sunglasses</td>
+                    <td>Acc</td>
+                    <td>2</td>
+                    <td><button type="button" id="editdata">Edit</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </section><br><br>
+
+
+
+    <!--for footer part-->
+    <footer>
+        <!--for contact us-->
+        <div class="contact">
+            <h4>Contact Us</h4>
+            <h6>©PleaseBe</h6>
+            <h6>02-987-6514</h6>
+            <h6>pleaseBe@email.com</h6>
+        </div>
+
+        <!--for instagram link-->
+        <a href="https://instagram.com/g.uariee?igshid=YmMyMTA2M2Y=">INSTAGRAM</a>
+        </br>
+        <!--for about us-->
+        <a href="Project_aboutUs.html">ABOUT US</a>
+
+    </footer>
+
+</body>
+
+</html>

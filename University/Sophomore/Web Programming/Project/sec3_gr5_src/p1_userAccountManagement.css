@@ -1,0 +1,229 @@
+* {
+  font-family: 'Red Hat Display', sans-serif;
+}
+
+header {
+  background-color: rgb(0, 0, 0);
+  padding: 20px;
+  text-align: center;
+}
+
+header a {
+  text-decoration: none;
+  font-weight: bolder;
+  color: aliceblue;
+}
+
+header a:hover {
+  color: aliceblue;
+}
+
+/*Navigater Bar*/
+nav {
+  background-color: rgb(244, 244, 246);
+  padding: 10px;
+  margin-bottom: 0%;
+  display: block;
+  text-align: center;
+  /* position: fixed; */
+}
+
+.navbar-nav me-auto mb-2 mb-lg-0 {
+  justify-content: center;
+  margin: auto;
+  position: fixed;
+}
+
+nav a {
+  font-weight: bold;
+  color: black;
+  margin: 60px;
+  text-decoration: underline;
+}
+
+.dropdown-menu show {
+  width: 200px;
+}
+
+.dropdown-item {
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 175px;
+  transition: all 0.3s;
+}
+
+.dropdown-item:hover {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  transition: all 0.3s;
+}
+
+.btn:hover {
+  color: var(--bs-btn-hover-color);
+  background-color: #9e3968;
+  border-color: #9e3968;
+}
+
+.describe {
+  padding: 100px;
+  text-align: center;
+  font-weight: bolder;
+  color: aliceblue;
+}
+
+main {
+  padding: 5%;
+}
+
+
+/*FOOTER*/
+footer {
+  background-color: rgb(0, 0, 0);
+  padding: 20px;
+  text-align: center;
+  margin-top: 20px;
+  flex-direction: column;
+}
+
+footer a {
+  font-weight: normal;
+  color: rgb(255, 255, 255);
+  text-decoration: underline;
+  margin-top: 10px;
+  transition: all 0.3s;
+}
+
+footer a:hover {
+  color: rgb(255, 255, 255);
+  font-size: large;
+  transition: all 0.3s;
+}
+
+h3 {
+  background-color: rgb(0, 0, 0);
+  color: white;
+}
+
+.btn:hover {
+  color: var(--bs-btn-hover-color);
+  background-color: #434649;
+  border-color: #434649;
+}
+
+.describe {
+  background-image: url(nj11.jpg);
+  padding: 100px;
+
+  text-align: center;
+  font-weight: bolder;
+  color: aliceblue;
+}
+
+main {
+  padding: 5%;
+}
+
+.addUserAccount,
+.delUserAccount {
+  width: 100%;
+  border-style: solid;
+  border-radius: 10px;
+  border-width: 2.5px;
+  margin-top: 10px;
+  border-color: rgb(0, 0, 0);
+  text-align: center;
+}
+
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: inline-block;
+}
+
+
+h1 {
+  text-align: center;
+}
+
+.table1 {
+  margin: auto;
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.table1 td,
+.table1 th {
+  border: 2px solid #434649;
+  background-color: #4346491e;
+  text-align: center;
+  padding: 8px;
+}
+
+section {
+  margin: auto;
+  width: 75%;
+}
+
+
+button {
+  border-radius: 10px;
+}
+
+ul.a1,
+ul.d1 {
+  position: relative;
+  display: inline-block;
+}
+
+ul.a1:hover li,
+ul.d1:hover li {
+  display: block;
+}
+
+ul.a1 li,
+ul.d1 li {
+  display: none;
+  position: absolute;
+  left: 0;
+  background: #f0cc78;
+  float: left;
+}
+
+.ft {
+  color: #ff8d46;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  border-style: solid;
+  padding: 3px;
+  border-width: 2px;
+  background-color: rgb(253, 237, 196);
+}
+
+@media screen and (min-width: 768px) {
+  nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+
+  .column {
+    float: left;
+    width: 26%;
+    height: 100%;
+  }
+}

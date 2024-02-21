@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>PleaseBe</title>
+
+
+  <!--font-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display&display=swap" rel="stylesheet">
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!--import CSS-->
+  <link rel="stylesheet" href="Project_main.css" />
+  <link rel="stylesheet" href="Project_detail.css" />
+  <style>
+    h1 {
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h2><a href="Project_home.html">PleaseBe</a></h2>
+  </header>
+
+  <!--NAVIGATER BAR-->
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <!--a class="navbar-brand" href="#">Menu</a-->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent" style="justify-content: center; margin: auto;">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="justify-content: center; margin: auto;">
+          <!--for Home button-->
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="Project_home.html">Home</a>
+          </li>
+
+          <!--for dropdown button-->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">Products</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="Project_men.html">MEN</a></li>
+              <li><a class="dropdown-item" href="Project_women.html">WOMEN</a></li>
+              <li><a class="dropdown-item" href="Project_kids.html">KIDS</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="Project_accessories.html">ACCESORIES</a></li>
+            </ul>
+          </li>
+
+          <!--for search button-->
+          <li class="nav-item" role="search">
+            <a class="nav-link" href="p1_search.html">Search</a>
+          </li>
+
+          <!--for user account management button-->
+          <li class="nav-item">
+            <a class="nav-link" href="p1_userAccoutManagement.html">User Account Management</a>
+          </li>
+
+          <!--for product management button-->
+          <li class="nav-item">
+            <a class="nav-link" href="Project_productmanagement.html">Product Management</a>
+          </li>
+          <!--for login button-->
+          <li class="nav-item">
+            <a class="nav-link" href="Project_login_cusotmer.html">Log In</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!--END NAV-->
+
+  <nav class="navbar navbar-expand-lg bg-body-tertiary"></nav>
+
+
+  <h1>Free shipping product</h1>
+  <!--for moving text-->
+  <marquee behavior="scroll" direction="left" scrollamount="7">Only when purchase over $1000 & Only shipping in Bangkok
+  </marquee>
+
+
+
+  <div class="product">
+    <!--for 1st product- for men-->
+    <div class="card">
+      <a href="Project_m-purple.html">
+        <img class="card-img-top" src="men2.jpg" alt="La chemise Cabri">
+      </a>
+      <div class="card-body">
+        <h5 class="card-title">La chemise Cabri</h5>
+        <p class="card-text">$ 525</p>
+      </div>
+      <div class="card-footer">
+        <small class="text-muted">Last updated 2 mins ago</small>
+      </div>
+    </div>
+
+
+    <!--for 2nd product- for women-->
+    <div class="card">
+      <a href="Project_wm-jogging.html">
+        <img class="card-img-top" src="women2.jpg" alt="Le jogging Jacquemus">
+      </a>
+      <div class="card-body">
+        <h5 class="card-title">Le jogging Jacquemus</h5>
+        <p class="card-text">$ 525</p>
+      </div>
+      <div class="card-footer">
+        <small class="text-muted">Last updated 3 mins ago</small>
+      </div>
+    </div>
+
+    <!--for 3rd product- for kid-->
+    <div class="card">
+      <a href="Project_k-skirt.html">
+        <img class="card-img-top" src="kids2.webp" alt="TerryShort">
+      </a>
+      <div class="card-body">
+        <h5 class="card-title">Terry Short</h5>
+        <p class="card-text">$ 259</p>
+      </div>
+      <div class="card-footer">
+        <small class="text-muted">Last updated 15 mins ago</small>
+      </div>
+    </div>
+
+    <!--for 4th product- for accessory-->
+    <div class="card">
+      <a href="Project_acc-earring.html">
+        <img class="card-img-top" src="acc2.jpg" alt="Earrings with DG logo and pearls">
+      </a>
+      <div class="card-body">
+        <h5 class="card-title">Earrings with DG logo and pearls</h5>
+        <p class="card-text">$ 359</p>
+      </div>
+      <div class="card-footer">
+        <small class="text-muted">Last updated 4 mins ago</small>
+      </div>
+    </div>
+
+    <!--for 5th product- for accessory-->
+    <div class="card">
+      <a href="Project_acc-belt.html">
+        <img class="card-img-top" src="acc3.jpg" alt="Tape belt with branded tag">
+      </a>
+      <div class="card-body">
+        <h5 class="card-title">Tape belt with branded tag</h5>
+        <p class="card-text">$399</p>
+      </div>
+      <div class="card-footer">
+        <small class="text-muted">Last updated 5 mins ago</small>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    <!--for contact us-->
+    <div class="contact">
+      <h4>Contact Us</h4>
+      <h6>©PleaseBe</h6>
+      <h6>02-987-6514</h6>
+      <h6>pleaseBe@email.com</h6>
+    </div>
+
+    <!--for instagram link-->
+    <a href="https://instagram.com/g.uariee?igshid=YmMyMTA2M2Y=">INSTAGRAM</a>
+    </br>
+
+    <!--for about us-->
+    <a href="Project_aboutUs.html">ABOUT US</a>
+  </footer>

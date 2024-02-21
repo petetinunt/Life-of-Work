@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>User Account Management System</title>
+
+  <!--font-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display&display=swap" rel="stylesheet">
+
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+  <!--import CSS-->
+  <link rel="stylesheet" href="Project_main.css" />
+  <link rel="stylesheet" href="p1_userAccountManagement.css" />
+
+</head>
+
+<body>
+    <header>
+        <h2><a href="Project_home.html">PleaseBe</a></h2>
+    </header>
+
+    <!--NAVIGATER BAR-->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <!--a class="navbar-brand" href="#">Menu</a-->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent"
+                style="justify-content: center; margin: auto;">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="justify-content: center; margin: auto;">
+                    <!--for Home button-->
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="Project_home.html">Home</a>
+                    </li>
+
+                   <!--for dropdown button-->
+                   <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">Products</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="Project_men.html">MEN</a></li>
+                        <li><a class="dropdown-item" href="Project_women.html">WOMEN</a></li>
+                        <li><a class="dropdown-item" href="Project_kids.html">KIDS</a></li>
+                     <li>
+                        <hr class="dropdown-divider">
+                     </li>
+                        <li><a class="dropdown-item" href="Project_accessories.html">ACCESORIES</a></li>
+                    </ul>
+                   </li>
+
+                    <!--for search button-->
+                    <li class="nav-item" role="search">
+                        <a class="nav-link" href="p1_search.html">Search</a>
+                    </li>
+
+                    <!--for user account management button-->
+                    <li class="nav-item">
+                        <a class="nav-link" href="p1_userAccoutManagement.html">User Account Management</a>
+                    </li>
+
+                    <!--for product management button-->
+                    <li class="nav-item">
+                        <a class="nav-link" href="Project_productmanagement.html">Product Management</a>
+                    </li>
+                    <!--for login button-->
+                    <li class="nav-item">
+                        <a class="nav-link" href="Project_login_cusotmer.html">Log In</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!--END NAV-->
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary"></nav>
+
+    <!--create section for admin-->
+    <section>
+        <ul class="ADD&DELdt">
+            <h1>User Account Management System </h1>
+
+            <div class=addUserAccount>
+                <!--for add user account part-->
+                <fieldset>
+                    <h3>Add User Account</h3><br>
+
+                    <!--user's ID-->
+                    <h5 id="user_id">User's ID:</h5>
+                    <input id="id_am" name="id_am" type="int" required="required"><br>
+
+                    <!--user's name-->
+                    <h5 id="name">User Name:</h5>
+                    <input id="name_am" name="name_am" type="text" required="required"><br>
+
+                    <!--user's phone-->
+                    <h5 id="phone_number">Phone number:</h5>
+                    <input type="tel" name="tel_am" id="tel_am" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                        title="Tel: XXX-XXX-XXXX" required="required"><br>
+
+                    <!--user's email-->
+                    <h5 id="email">Email:</h5>
+                    <input type="email" name="email_am" id="email_am" cols="50" rows="3" required="required"><br>
+
+                    <!--user's birthday-->
+                    <h5 id="bdate">Birthdate:</h5>
+                    <input type="date" name="bd_d" max="2023-01-01">
+
+                    <!--create button for Add User Account-->
+                    <h5>&nbsp;</h5>
+                    <br><button type="submit" name="button" id="button" onclick="insertAdmin()">Add User
+                        Account</button>
+                </fieldset>
+                </br>
+            </div>
+
+
+            <!--for delete user account part-->
+            <div class=delUserAccount>
+                <fieldset>
+                    <h3>Delete User Account Data</h3>
+                    <br>
+                    <!--ID-->
+                    <h5 id="admin_id">User ID:</h5>
+                    <input id="id_am" name="id_am" type="int" required="required"><br>
+                    <br>
+                    <br><button type="submit" name="button" id="button" onclick="deleteAdmin()">Delete User
+                        Account</button>
+                </fieldset>
+                </br>
+            </div>
+            <!--</form>-->
+        </ul>
+
+        <!--create table toc collect user data-->
+        <h2>Update User Account Management System</h2>
+        <table class="table1">
+            <tbody>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Phone number</th>
+                    <th>Email</th>
+                    <th>Birthdate</th>
+                    <th>Edit User Account</th>
+                    <th>Delete User Account</th>
+                    
+                </tr>
+                <!--for 1st user-->
+                <tr>
+                    <td>6488001</td>
+                    <td>Napat Boogaree</td>
+                    <td>0830380422</td>
+                    <td>Napat.bog@student.mahidol.ac.th</td>
+                    <td>19/02/2003</td>
+                    <td><button type="button" id="deldata">Edit</button></td>
+                    <td><button type="button" id="deldata">DEL</button></td>
+                </tr>
+                <!--for 2nd user-->
+                <tr>
+                    <td>6488081</td>
+                    <td>Pittinunt Sirigittikul</td>
+                    <td>0830103219</td>
+                    <td>Pittinunt.Sir@student.mahidol.ac.th</td>
+                    <td>21/10/2002</td>
+                    <td><button type="button" id="deldata">Edit</button></td>
+                    <td><button type="button" id="deldata">DEL</button></td>
+                </tr>
+                <!--for 3rd user-->
+                <tr>
+                    <td>6488096</td>
+                    <td>Peerapong Tantasilp</td>
+                    <td>0996296241</td>
+                    <td>Peerapong.Tat@student.mahidol.ac.th</td>
+                    <td>24/08/2002</td>
+                    <td><button type="button" id="deldata">Edit</button></td>
+                    <td><button type="button" id="deldata">DEL</button></td>
+                </tr>
+                <!--for 4th user-->
+                <tr>
+                    <td>6488110</td>
+                    <td>Pattaraporn Tongmahavised</td>
+                    <td>0841391789</td>
+                    <td>Pattaraporn.Tong@student.mahidol.ac.th</td>
+                    <td>30/01/2003</td>
+                    <td><button type="button" id="deldata">Edit</button></td>
+                    <td><button type="button" id="deldata">DEL</button></td>
+                </tr>
+                <!--for delete part user-->
+                <tr>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td><button type="button" id="adddata">ADD</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </section><br><br>
+
+    <!--for footer part-->
+    <footer>
+        <!--for contact us-->
+        <div class="contact">
+            <h4>Contact Us</h4>
+            <h6>©PleaseBe</h6>
+            <h6>02-987-6514</h6>
+            <h6>pleaseBe@email.com</h6>
+        </div>
+
+        <!--for instagram link-->
+        <a href="https://instagram.com/g.uariee?igshid=YmMyMTA2M2Y=">INSTAGRAM</a>
+        </br>
+        <!--for about us-->
+        <a href="Project_aboutUs.html">ABOUT US</a>
+
+    </footer>
+
+</body>
+
+</html>

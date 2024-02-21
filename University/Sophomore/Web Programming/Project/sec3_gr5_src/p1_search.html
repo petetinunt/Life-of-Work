@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Search</title>
+
+  <!--font-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display&display=swap" rel="stylesheet">
+
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!--import CSS-->
+  <link rel="stylesheet" href="Project_main.css" />
+  <link rel="stylesheet" href="p1_search.css" />
+
+  <style>
+    .column{
+      text-align: center;
+    }
+
+    footer{
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h2><a href="Project_home.html">PleaseBe</a></h2>
+  </header>
+
+  <!--NAVIGATER BAR-->
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <!--a class="navbar-brand" href="#">Menu</a-->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent" style="justify-content: center; margin: auto;">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="justify-content: center; margin: auto;">
+          <!--for Home button-->
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="Project_home.html">Home</a>
+          </li>
+
+          <!--for dropdown button-->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">Products</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="Project_men.html">MEN</a></li>
+              <li><a class="dropdown-item" href="Project_women.html">WOMEN</a></li>
+              <li><a class="dropdown-item" href="Project_kids.html">KIDS</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="Project_accessories.html">ACCESORIES</a></li>
+            </ul>
+          </li>
+
+          <!--for search button-->
+          <li class="nav-item" role="search">
+            <a class="nav-link" href="p1_search.html">Search</a>
+          </li>
+
+          <!--for user account management button-->
+          <li class="nav-item">
+            <a class="nav-link" href="p1_userAccoutManagement.html">User Account Management</a>
+          </li>
+
+          <!--for product management button-->
+          <li class="nav-item">
+            <a class="nav-link" href="Project_productmanagement.html">Product Management</a>
+          </li>
+          <!--for login button-->
+          <li class="nav-item">
+            <a class="nav-link" href="Project_login_cusotmer.html">Log In</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!--END NAV-->
+
+  <nav class="navbar navbar-expand-lg bg-body-tertiary"></nav>
+
+
+  <main>
+   <!-- serch box -->
+    <div class="background-search">
+      <!--create class search-->
+      <div class="search">
+        <form action="p1_product&service.html" class="column">
+          <input type="text" name="Search" placeholder="SEARCH">
+          <!-- fix link to eaaring page-->
+          <button class="search button">
+            <a href="Project_newCollection.html">Go</a>
+          </button>
+        </form>
+        <br>
+      </div> 
+
+
+
+
+
+      <!--create class column for select from category-->
+      <div class="column">
+        <!--create class dropdown-->
+        <div class="dropdown">
+          <!--create dropdown button-->
+          <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            By Category
+          </button>
+
+          <!--create list -->
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="p1_searchByName.html">product's name</a></li>
+            <li><a class="dropdown-item" href="p1_searchBySerialNumber.html">product's serial number</a></li>
+            <li><a class="dropdown-item" href="p1_searchByPromotion.html">product's promotion</a></li>
+            <li><a class="dropdown-item" href="p1_searchByPrice.html">product's price</a></li>
+          </ul>
+          </ul>
+        </div>
+      </div>
+      <br>
+    </div>
+  </main>
+
+
+
+
+
+
+
+</body>
+
+<footer>
+  <!--for contact us-->
+  <div class="contact">
+    <h4>Contact Us</h4>
+    <h6>©PleaseBe</h6>
+    <h6>02-987-6514</h6>
+    <h6>pleaseBe@email.com</h6>
+  </div>
+
+  <!--for instagram link-->
+  <a href="https://instagram.com/g.uariee?igshid=YmMyMTA2M2Y=">INSTAGRAM</a>
+  </br>
+  <!--for about us-->
+  <a href="Project_aboutUs.html">ABOUT US</a>
+
+</footer>
+
+</html>

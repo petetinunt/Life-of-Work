@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>About Us</title>
+
+    <!--font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display&display=swap" rel="stylesheet">
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!--import CSS-->
+    <link rel="stylesheet" href="Project_main.css" />
+
+    <!--internal CSS-->
+    <style>
+        h1,
+        h5 {
+            text-align: center;
+        }
+
+        .column {
+            justify-content: center;
+            text-align: center;
+            display: block;
+            margin: auto;
+            width: 50%;
+            margin-bottom: 16px;
+            padding: 0 8px;
+        }
+
+        .card {
+            justify-content: center;
+            display: flex;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            margin: auto;
+            display: block;
+
+        }
+
+        .container {
+            justify-content: center;
+            padding: 0 16px;
+        }
+
+        .container::after,
+        .row::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+
+        .button {
+            border: none;
+            outline: 0;
+            display: inline-block;
+            padding: 8px;
+            color: white;
+            background-color: #000;
+            text-align: center;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .button:hover {
+            background-color: #555;
+        }
+
+        @media screen and (max-width: 650px) {
+            .column {
+                width: 100%;
+                display: block;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h2><a href="Project_home.html">PleaseBe</a></h2>
+    </header>
+
+
+    <!--NAVIGATER BAR-->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <!--a class="navbar-brand" href="#">Menu</a-->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent"
+                style="justify-content: center; margin: auto;">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="justify-content: center; margin: auto;">
+                    <!--for Home button-->
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="Project_home.html">Home</a>
+                    </li>
+
+                    <!--for dropdown button-->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">Products</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="Project_men.html">MEN</a></li>
+                            <li><a class="dropdown-item" href="Project_women.html">WOMEN</a></li>
+                            <li><a class="dropdown-item" href="Project_kids.html">KIDS</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="Project_accessories.html">ACCESORIES</a></li>
+                        </ul>
+                    </li>
+
+                    <!--for search button-->
+                    <li class="nav-item" role="search">
+                        <a class="nav-link" href="p1_search.html">Search</a>
+                    </li>
+
+                    <!--for user account management button-->
+                    <li class="nav-item">
+                        <a class="nav-link" href="p1_userAccoutManagement.html">User Account Management</a>
+                    </li>
+
+                    <!--for product management button-->
+                    <li class="nav-item">
+                        <a class="nav-link" href="Project_productmanagement.html">Product Management</a>
+                    </li>
+                    <!--for login button-->
+                    <li class="nav-item">
+                        <a class="nav-link" href="Project_login_cusotmer.html">Log In</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!--END NAV-->
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary"></nav>
+
+
+    <div class="about-section">
+        <h1>Our team</h1>
+        <h5>“First, solve the problem. Then, write the code.” – John Johnson</h5>
+
+    </div>
+
+    <!--create first member-->
+    <div class="row">
+        <div class="column">
+            <div class="card">
+                <img src="mind.jpg" alt="Pu" style="width:100%">
+                <div class="container">
+                    <h2>6488001 Napat Boongaree</h2>
+                    <p class="title">Sophomore at ICT, Mahidol</p>
+                    <p class="phone">0830380422</p>
+                    <p><button class="button" onclick="location.href='mailto:Napat.bog@student.mahidol.ac.th';">Contact
+                            via Email</button></p>
+                </div>
+            </div>
+        </div>
+
+        <!--create second member-->
+        <div class="row">
+            <div class="column">
+                <div class="card">
+                    <img src="nongpete.jpg" alt="Pu" style="width:100%">
+                    <div class="container">
+                        <h2>6488081 Pittinunt Sirigittikul</h2>
+                        <p class="title">Sophomore at ICT, Mahidol</p>
+                        <p class="phone">0830103219</p>
+                        <p><button class="button"
+                                onclick="location.href='mailto:Pittinunt.Sir@student.mahidol.ac.th';">Contact via
+                                Email</button></p>
+                    </div>
+                </div>
+            </div>
+
+            <!--create third member-->
+            <div class="row">
+                <div class="column">
+                    <div class="card">
+                        <img src="ming.jpg" alt="Pu" style="width:100%">
+                        <div class="container">
+                            <h2>6488096 Peerapong Tantasilp</h2>
+                            <p class="title">Sophomore at ICT, Mahidol</p>
+                            <p class="phone">099629241</p>
+                            <p><button class="button"
+                                    onclick="location.href='mailto:Peerapong.Tat@student.mahidol.ac.th';">Contact via
+                                    Email</button></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!--create fourth member-->
+                <div class="row">
+                    <div class="column">
+                        <div class="card">
+                            <img src="sinsin.jpg" alt="Pu" style="width:100%">
+                            <div class="container">
+                                <h2>6488110 Pattaraporn Tongmahavised</h2>
+                                <p class="title">Sophomore at ICT, Mahidol</p>
+                                <p class="phone">0841391789</p>
+                                <p><button class="button"
+                                        onclick="location.href='mailto:Pattaraporn.Tong@student.mahidol.ac.th';">Contact
+                                        via Email</button></p>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+</body>
+
+</html>
+
+<footer>
+    <!--for contact us-->
+    <div class="contact">
+        <h4>Contact Us</h4>
+        <h6>©PleaseBe</h6>
+        <h6>02-987-6514</h6>
+        <h6>pleaseBe@email.com</h6>
+    </div>
+
+    <!--for instagram link-->
+    <a href="https://instagram.com/g.uariee?igshid=YmMyMTA2M2Y=">INSTAGRAM</a>
+    </br>
+
+    <!--for about us-->
+    <a href="Project_aboutUs.html">ABOUT US</a>
+</footer>

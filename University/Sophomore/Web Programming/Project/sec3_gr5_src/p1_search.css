@@ -1,0 +1,29 @@
+/* CSS for Login Page */
+.background-search {
+    margin-bottom: 100px;
+    align-items: center;
+    text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+    nav {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
+    .column {
+        float: left;
+        width: 26%;
+        height: 100%;
+    }
+}
+
